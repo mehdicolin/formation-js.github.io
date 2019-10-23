@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<body>
+	
+		<span id="button" class="button">Button 1</span>
+
+		<span id="button2" class="button">Button 2</span>
+
+		<div class="global">
+		  <div id="content1" class="content"></div>
+		  <div id="content2" class="content"></div>
+		  <div id="content3" class="content"></div>
+		</div>
+		
+		<style>
+		*{font-family:Calibri;}
+		.global{width:380px;}
+		.content{
+		  background-color:#eee;
+		  display:inline-block;
+		  width:380px;
+		  height:150px;
+		  margin:10px;
+		  padding:10px;
+		  box-sizing: border-box;
+		}
+		.button{
+		  display:inline-block;
+		  padding:5px 50px;
+		  background-color:#09f;
+		  color:#fff;
+		  border-radius:5px;
+		  margin-left:10px;
+		}
+		</style>
+		
+		<script type="text/javascript">
+			window.onload = function(){
+			  document.querySelectorAll("#content1")[0]
+				.innerHTML='content 1';
+			}
+
+			document.querySelectorAll("#button")[0]
+			  .addEventListener('click', function(event) {
+			  document.querySelectorAll("#content2")[0]
+				.innerHTML='content 2';
+			});
+
+			document.querySelectorAll("#button2")[0]
+			  .addEventListener('mouseover', function(event) {
+			  document.querySelectorAll("#content3")[0]
+				.innerHTML='content 3';
+			});
+		</script>
+	
+	</body>
+</html>
